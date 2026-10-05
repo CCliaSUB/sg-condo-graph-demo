@@ -1,0 +1,254 @@
+{
+  "rent_h1": {
+    "task": "rent",
+    "horizon": 1,
+    "trial": "c14_mean_lowreg",
+    "seed": 42,
+    "run_dir": "experiments/three_edge_final_260903/final_model/260903_rent_h1_plus_same_mrt_similar_price_mixed_hops_full_c14_mean_lowreg_s42",
+    "predictions": "outputs/predictions/sg_full_260903_final/rent_h1_seed42_final.csv",
+    "graph_snapshots": "outputs/predictions/sg_full_260903_final/rent_graph_snapshots.csv.gz",
+    "selection": "fixed 20-epoch refit on pre-test data; test set not used for selection",
+    "similar_price": {
+      "k": 5,
+      "tolerance": 0.1,
+      "column": "rent_per_sqft_imp"
+    },
+    "metrics": {
+      "rmse": 0.43915795479855296,
+      "mae": 0.3074800670146942,
+      "mape": 7.386030197143555,
+      "r2": 0.898831925970411
+    },
+    "num_samples": 177754,
+    "reproduces_result_json": {
+      "rmse": [
+        0.43915795479855296,
+        0.43915795479855296
+      ],
+      "num_samples": [
+        177754,
+        177754
+      ]
+    },
+    "date_range": [
+      "2020-02-01",
+      "2026-01-01"
+    ],
+    "mean_edges_per_month": {
+      "same_mrt": 750.3,
+      "similar_price": 17946.0,
+      "size_project": 12482.5
+    },
+    "seconds": 348.6
+  },
+  "rent_h12": {
+    "task": "rent",
+    "horizon": 12,
+    "trial": "c08_small_dropout",
+    "seed": 42,
+    "run_dir": "experiments/three_edge_final_260903/final_model/260903_rent_h12_plus_same_mrt_similar_price_mixed_hops_full_c08_small_dropout_s42",
+    "predictions": "outputs/predictions/sg_full_260903_final/rent_h12_seed42_final.csv",
+    "graph_snapshots": "outputs/predictions/sg_full_260903_final/rent_graph_snapshots.csv.gz",
+    "selection": "fixed 9-epoch refit on pre-test data; test set not used for selection",
+    "similar_price": {
+      "k": 5,
+      "tolerance": 0.1,
+      "column": "rent_per_sqft_imp"
+    },
+    "metrics": {
+      "rmse": 0.7483747675015885,
+      "mae": 0.5711708068847656,
+      "mape": 12.269205093383789,
+      "r2": 0.7000548929398884
+    },
+    "num_samples": 150705,
+    "reproduces_result_json": {
+      "rmse": [
+        0.7483747675015885,
+        0.7483742896287388
+      ],
+      "num_samples": [
+        150705,
+        150705
+      ]
+    },
+    "date_range": [
+      "2021-01-01",
+      "2026-01-01"
+    ],
+    "mean_edges_per_month": {
+      "same_mrt": 750.3,
+      "similar_price": 17946.0,
+      "size_project": 12482.5
+    },
+    "seconds": 544.4
+  },
+  "rent_h24": {
+    "task": "rent",
+    "horizon": 24,
+    "trial": "c08_small_dropout",
+    "seed": 42,
+    "run_dir": "experiments/three_edge_final_260903/final_model/260903_rent_h24_plus_same_mrt_similar_price_mixed_hops_full_c08_small_dropout_s42",
+    "predictions": "outputs/predictions/sg_full_260903_final/rent_h24_seed42_final.csv",
+    "graph_snapshots": "outputs/predictions/sg_full_260903_final/rent_graph_snapshots.csv.gz",
+    "selection": "fixed 13-epoch refit on pre-test data; test set not used for selection",
+    "similar_price": {
+      "k": 5,
+      "tolerance": 0.1,
+      "column": "rent_per_sqft_imp"
+    },
+    "metrics": {
+      "rmse": 1.054233481560218,
+      "mae": 0.8665520548820496,
+      "mape": 18.146156311035156,
+      "r2": 0.37032085838015705
+    },
+    "num_samples": 119839,
+    "reproduces_result_json": {
+      "rmse": [
+        1.054233481560218,
+        1.0542334250218444
+      ],
+      "num_samples": [
+        119839,
+        119839
+      ]
+    },
+    "date_range": [
+      "2022-01-01",
+      "2026-01-01"
+    ],
+    "mean_edges_per_month": {
+      "same_mrt": 750.3,
+      "similar_price": 17946.0,
+      "size_project": 12482.5
+    },
+    "seconds": 222.9
+  },
+  "sale_h12": {
+    "task": "sale",
+    "horizon": 12,
+    "trial": "c18_radam_concat",
+    "seed": 42,
+    "run_dir": "experiments/three_edge_final_260903/final_model/260903_sale_h12_plus_same_mrt_similar_price_mixed_hops_full_c18_radam_concat_s42",
+    "predictions": "outputs/predictions/sg_full_260903_final/sale_h12_seed42_final.csv",
+    "graph_snapshots": "outputs/predictions/sg_full_260903_final/sale_graph_snapshots.csv.gz",
+    "selection": "fixed 13-epoch refit on pre-test data; test set not used for selection",
+    "similar_price": {
+      "k": 5,
+      "tolerance": 0.1,
+      "column": "rent_per_sqft_imp"
+    },
+    "metrics": {
+      "rmse": 296.8012671595254,
+      "mae": 249.11849975585938,
+      "mape": 14.939361572265625,
+      "r2": 0.6380292127153071
+    },
+    "num_samples": 53863,
+    "reproduces_result_json": {
+      "rmse": [
+        296.8012671595254,
+        296.8015961884302
+      ],
+      "num_samples": [
+        53863,
+        53863
+      ]
+    },
+    "date_range": [
+      "2021-01-01",
+      "2026-02-01"
+    ],
+    "mean_edges_per_month": {
+      "same_mrt": 511.3,
+      "similar_price": 16302.9,
+      "size_project": 11852.6
+    },
+    "seconds": 641.5
+  },
+  "sale_h1": {
+    "task": "sale",
+    "horizon": 1,
+    "trial": "c15_concat_deep_cosine",
+    "seed": 42,
+    "run_dir": "experiments/three_edge_final_260903/final_model/260903_sale_h1_plus_same_mrt_similar_price_mixed_hops_full_c15_concat_deep_cosine_s42",
+    "predictions": "outputs/predictions/sg_full_260903_final/sale_h1_seed42_final.csv",
+    "graph_snapshots": "outputs/predictions/sg_full_260903_final/sale_graph_snapshots.csv.gz",
+    "selection": "fixed 27-epoch refit on pre-test data; test set not used for selection",
+    "similar_price": {
+      "k": 5,
+      "tolerance": 0.1,
+      "column": "rent_per_sqft_imp"
+    },
+    "metrics": {
+      "rmse": 86.9152306803517,
+      "mae": 61.550628662109375,
+      "mape": 3.774259567260742,
+      "r2": 0.9695242865683091
+    },
+    "num_samples": 61370,
+    "reproduces_result_json": {
+      "rmse": [
+        86.9152306803517,
+        86.91531213989282
+      ],
+      "num_samples": [
+        61370,
+        61370
+      ]
+    },
+    "date_range": [
+      "2020-02-01",
+      "2026-02-01"
+    ],
+    "mean_edges_per_month": {
+      "same_mrt": 511.3,
+      "similar_price": 16302.9,
+      "size_project": 11852.6
+    },
+    "seconds": 863.9
+  },
+  "sale_h24": {
+    "task": "sale",
+    "horizon": 24,
+    "trial": "c13_small_mean_stable",
+    "seed": 42,
+    "run_dir": "experiments/three_edge_final_260903/final_model/260903_sale_h24_plus_same_mrt_similar_price_mixed_hops_full_c13_small_mean_stable_s42",
+    "predictions": "outputs/predictions/sg_full_260903_final/sale_h24_seed42_final.csv",
+    "graph_snapshots": "outputs/predictions/sg_full_260903_final/sale_graph_snapshots.csv.gz",
+    "selection": "fixed 1-epoch refit on pre-test data; test set not used for selection",
+    "similar_price": {
+      "k": 5,
+      "tolerance": 0.1,
+      "column": "rent_per_sqft_imp"
+    },
+    "metrics": {
+      "rmse": 196.45643998734172,
+      "mae": 164.16529846191406,
+      "mape": 9.794116020202637,
+      "r2": 0.8347277486182152
+    },
+    "num_samples": 40634,
+    "reproduces_result_json": {
+      "rmse": [
+        196.45643998734172,
+        196.4568376577919
+      ],
+      "num_samples": [
+        40634,
+        40634
+      ]
+    },
+    "date_range": [
+      "2022-01-01",
+      "2026-02-01"
+    ],
+    "mean_edges_per_month": {
+      "same_mrt": 511.3,
+      "similar_price": 16302.9,
+      "size_project": 11852.6
+    },
+    "seconds": 564.7
+  }
+}

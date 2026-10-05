@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: sg-condo-graph-demo
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    autoDeploy: true
