@@ -33,7 +33,7 @@ import pandas as pd
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
-REPO_ROOT = Path(os.environ.get("PGIM_REPO_ROOT", Path(__file__).resolve().parents[2]))
+REPO_ROOT = Path(os.environ.get("PGIM_REPO_ROOT") or Path(__file__).resolve().parents[2])
 PREDICTIONS = REPO_ROOT / "outputs" / "predictions"
 HORIZONS = (1, 12, 24)
 SIZE_PROJECT_RELATION = "size_project"
@@ -729,7 +729,7 @@ def predictions(project_id: int, dataset: DatasetParam = None, horizon: Annotate
 # so ``site`` starts the warm-up itself.
 from fastapi.staticfiles import StaticFiles  # noqa: E402
 
-STATIC_DIR = Path(os.environ.get("PGIM_STATIC_DIR", Path(__file__).resolve().parents[1] / "dist"))
+STATIC_DIR = Path(os.environ.get("PGIM_STATIC_DIR") or Path(__file__).resolve().parents[1] / "dist")
 site = FastAPI(title="PGIM Graph Map", lifespan=lifespan, docs_url=None, redoc_url=None, openapi_url=None)
 site.mount("/api", app)
 if STATIC_DIR.is_dir():
